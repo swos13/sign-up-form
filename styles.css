@@ -1,6 +1,38 @@
 body {
     height: 100vh;
     width: 100%;
+    padding: 0;
+    margin: 0;
     background-image: url("background.jpg");
     background-size: 100% 100%;
+
+    display: flex;
+}
+
+.image {
+    flex: 35%;
+    position: relative;
+}
+
+form {
+    background-color: #f1f1f1;
+    flex: 65%;
+}
+
+.img-text {
+    padding: 4px 0;
+    text-align: center;
+    color: white;
+
+    position: absolute;
+    width: 100%;
+    bottom: 0.25rem;
+}
+
+.image a {
+    color: white;
+}
+
+.image a:visited {
+    color: white;
 }
