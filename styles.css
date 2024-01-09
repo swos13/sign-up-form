@@ -13,6 +13,12 @@
     src: url("./fonts/Roboto-Medium.ttf");
 }
 
+input, button {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -46,7 +52,7 @@ form {
 
     background-color: rgba(0,0,0,0.5);
     color: white;
-    font: 172px Norse, Helvetica, sans-serif;
+    font: 9rem Norse, Helvetica, sans-serif;
 
     display: flex;
     justify-content: center;
@@ -80,11 +86,12 @@ form {
 form > div {
     padding-left: 48px;
     padding-right: 128px;
+    padding-bottom: 16px;
 }
 
 .header-container {
     flex: 35%;
-    font: 24px Roboto-Medium, sans-serif;
+    font: 1.5rem Roboto-Medium, sans-serif;
 
     display: flex;
     flex-direction: column;
@@ -95,11 +102,61 @@ form > div {
     padding-bottom: 48px;
 }
 
-.data-input-container {
+.form-body-container {
     background-color: white;
+}
+
+.data-input-container {
     flex: 30%;
+    padding-bottom: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-body-container > h2 {
+    font: 1.5rem Roboto-Medium, Helvetica, sans-serif;
+}
+
+.form-row {
+    display: flex;
+    gap: 64px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container > input {
+    border: 1px solid #e4e4e4;
+    border-radius: 3px;
+    padding: 0.25rem;
+}
+
+.input-container > input:valid {
+    outline: 1px solid #01bb55;
+}
+
+.input-container > input:invalid {
+    outline: 1px solid #bb0101;
+}
+
+.input-container > input:focus {
+    outline: 1px solid #010ebb;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.input-container > label {
+    font-size: 0.50rem;
+    padding-bottom: 2px;
+    font: 0.60rem Roboto-Medium, Helvetica, sans-serif;
+    color: #5f5f5f;
+    letter-spacing: 0.25ch;
 }
 
 .submission-container {
     flex: 35%;
+    padding-top: 32px;
 }
