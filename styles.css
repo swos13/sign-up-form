@@ -1,11 +1,16 @@
 @font-face {
+    font-family: Norse;
+    src: url("./fonts/Norse.otf");
+}
+
+@font-face {
     font-family: Roboto;
     src: url("./fonts/Roboto-Regular.woff");
 }
 
 @font-face {
-    font-family: Norse;
-    src: url("./fonts/Norse.otf");
+    font-family: Roboto-Medium;
+    src: url("./fonts/Roboto-Medium.ttf");
 }
 
 body {
@@ -72,8 +77,22 @@ form {
     color: white;
 }
 
+form > div {
+    padding-left: 48px;
+    padding-right: 128px;
+}
+
 .header-container {
     flex: 35%;
+    font: 24px Roboto-Medium, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header-container span {
+    padding-bottom: 48px;
 }
 
 .data-input-container {
