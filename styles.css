@@ -30,15 +30,17 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-image: url("background.jpg");
     background-size: 100% 100%;
 
     display: flex;
 }
 
 .image {
+    background-image: url("background.jpg");
+    background-size: 200% 100vh;
     position: relative;
     flex: 40%;
+    min-width: 360px;
 }
 
 form {
@@ -63,11 +65,11 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 2rem;
 }
 
 .logo-container img {
-    width:20%;
+    width: 20%;
 }
 
 .img-text {
@@ -158,7 +160,7 @@ form > div {
     font-size: 0.50rem;
     padding-bottom: 2px;
     font: 0.60rem Roboto-Medium, Helvetica, sans-serif;
-    color: #5f5f5f;
+    color: #4b4b4b;
     letter-spacing: 0.25ch;
 }
 
@@ -200,4 +202,35 @@ form > div {
 .submission-container a {
     text-decoration: none;
     color: var(--button-color);
+}
+
+@media only screen and (max-width: 360px) {
+    body {
+        height: 200vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-size: 100% 100%;
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        min-height: 800px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .header-container {
+        padding: 32px;
+        margin: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
