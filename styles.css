@@ -191,6 +191,7 @@ form > div {
     border-radius: 5px;
     padding: 0.5rem 32px;
     box-shadow: var(--shadow);
+    font: 0.90rem Roboto-Medium, Helvetica, sans-serif;
 
     color: white;
 }
