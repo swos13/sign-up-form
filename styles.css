@@ -13,6 +13,11 @@
     src: url("./fonts/Roboto-Medium.ttf");
 }
 
+:root{
+    --shadow: 2px 2px 3px rgb(180, 180, 180);
+    --button-color: #2a6e27;
+}
+
 input, button {
     padding: 0;
     margin: 0;
@@ -145,7 +150,7 @@ form > div {
 
 .input-container > input:focus {
     outline: 1px solid #010ebb;
-    box-shadow: 2px 2px 3px grey;
+    box-shadow: var(--shadow);
 }
 
 .input-container > label {
@@ -159,4 +164,24 @@ form > div {
 .submission-container {
     flex: 35%;
     padding-top: 32px;
+    font: 0.90rem Roboto-Medium, Helvetica, sans-serif;
+}
+
+.submission-container button {
+
+    background-color: var(--button-color);
+    border-radius: 5px;
+    padding: 0.5rem 32px;
+    box-shadow: var(--shadow);
+
+    color: white;
+}
+
+.submission-container button:active{
+    background-color: #44ac3e;
+}
+
+.submission-container a {
+    text-decoration: none;
+    color: var(--button-color);
 }
