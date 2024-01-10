@@ -22,6 +22,7 @@ input, button {
     padding: 0;
     margin: 0;
     border: none;
+    width: 250px;
 }
 
 body {
@@ -37,12 +38,12 @@ body {
 
 .image {
     position: relative;
-    flex: 35%;
+    flex: 40%;
 }
 
 form {
     background-color: #f1f1f1;
-    flex: 65%;
+    flex: 60%;
 
     display: flex;
     flex-direction: column;
@@ -117,7 +118,7 @@ form > div {
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .form-body-container > h2 {
@@ -161,6 +162,22 @@ form > div {
     letter-spacing: 0.25ch;
 }
 
+.input-container > input + label {
+    padding-top: 2px;
+    margin: 0;
+    text-wrap: wrap;
+    max-width: 250px;
+}
+
+.input-container > input:valid + label {
+    visibility: hidden;
+}
+
+.input-container > input:invalid + label {
+    visibility: visible;
+    color: #bb0101;
+}
+
 .submission-container {
     flex: 35%;
     padding-top: 32px;
@@ -168,7 +185,6 @@ form > div {
 }
 
 .submission-container button {
-
     background-color: var(--button-color);
     border-radius: 5px;
     padding: 0.5rem 32px;
@@ -177,7 +193,7 @@ form > div {
     color: white;
 }
 
-.submission-container button:active{
+.submission-container button:active {
     background-color: #44ac3e;
 }
 

@@ -26,30 +26,36 @@
                     <div class="input-container">
                         <label for="first-name">FIRST NAME</label>
                         <input type="text" id="first-name" name="first-name" required>
+                        <label class="invalid">First name is required</label>
                     </div>
                     <div class="input-container">
                         <label for="last-name">LAST NAME</label>
                         <input type="text" id="last-name" name="last-name" required>
+                        <label class="invalid">Last name is required</label>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="john@example.com"required>
+                        <label class="invalid">Email address is invalid</label>
                     </div>
                     <div class="input-container">
                         <label for="phone">PHONE NUMBER</label>
                         <input type="tel" id="phone" name="phone-number" maxlength="12" pattern="(\+[0-9]{10}[0-9]?)|([0-9]{9})"required>
+                        <label class="invalid">Phone number is not correct</label>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
                         <label for="first-name">PASSWORD</label>
-                        <input type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-])[A-Za-z\d@$!%*#?&-]{8,}$" required>
+                        <input type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+                        <label class="invalid">Password should have at least 8 characters, including letter, number and special character</label>
                     </div>
                     <div class="input-container">
                         <label for="confirmed-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirmed-password" name="confirmed-password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-])[A-Za-z\d@$!%*#?&-]{8,}$" required>
+                        <input type="password" id="confirmed-password" name="confirmed-password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+                        <label class="invalid">Passwords do not match</label>
                     </div>
                 </div>
             </div>
