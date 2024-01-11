@@ -175,12 +175,11 @@ form > div {
     visibility: hidden;
 }
 
-/*
-.input-container > input:invalid + label {
+.input-container > input + label.invalid {
     visibility: visible;
     color: #bb0101;
 }
-*/
+
 .submission-container {
     flex: 35%;
     padding-top: 32px;

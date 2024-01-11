@@ -38,12 +38,28 @@ function validateInputs(){
     for(let i=0; i<inputs.length; i++){
         if(!checkWithPattern(inputs[i].input.value, inputs[i].pattern)){
             isValid = false;
+            const errorLabel = document.querySelector(`#${inputs[i].input.id} + label`);
+            errorLabel.classList.add("invalid");
         }
     }
+    return isValid;
 }
 
 setArray();
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    validateInputs();
+    if(!validateInputs())
+        event.preventDefault();
 })
+
+for(let i=0; i<inputs.length; i++){
+    inputs[i].input.addEventListener('change', () => {
+        const errorLabel = document.querySelector(`#${inputs[i].input.id} + label`);
+        if(!checkWithPattern(inputs[i].input.value, inputs[i].pattern)){
+            isValid = false;
+            errorLabel.classList.add("invalid");
+        }
+        else{
+            errorLabel.classList.remove("invalid");
+        }
+    });
+}
