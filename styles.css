@@ -142,7 +142,7 @@ form > div {
     border-radius: 3px;
     padding: 0.25rem;
 }
-
+/*
 .input-container > input:valid {
     outline: 1px solid #01bb55;
 }
@@ -150,7 +150,7 @@ form > div {
 .input-container > input:invalid {
     outline: 1px solid #bb0101;
 }
-
+*/
 .input-container > input:focus {
     outline: 1px solid #010ebb;
     box-shadow: var(--shadow);
@@ -175,11 +175,12 @@ form > div {
     visibility: hidden;
 }
 
+/*
 .input-container > input:invalid + label {
     visibility: visible;
     color: #bb0101;
 }
-
+*/
 .submission-container {
     flex: 35%;
     padding-top: 32px;
